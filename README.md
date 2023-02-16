@@ -1,5 +1,7 @@
 # WSPieChartSwift
 
+A pie chart control, can be used as EMI calculator or any equivalent. Easy to integrate and use. Just assign custom class to your view and use easy configuration as mentioned in example project.
+
 [![CI Status](https://img.shields.io/travis/WebsoftProfession/WSPieChartSwift.svg?style=flat)](https://travis-ci.org/WebsoftProfession/WSPieChartSwift)
 [![Version](https://img.shields.io/cocoapods/v/WSPieChartSwift.svg?style=flat)](https://cocoapods.org/pods/WSPieChartSwift)
 [![License](https://img.shields.io/cocoapods/l/WSPieChartSwift.svg?style=flat)](https://cocoapods.org/pods/WSPieChartSwift)
@@ -32,3 +34,6 @@ WebsoftProfession, websoftprofession@gmail.com
 ## License
 
 WSPieChartSwift is available under the MIT license. See the LICENSE file for more info.
+=======
+
+
