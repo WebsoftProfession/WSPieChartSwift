@@ -1,0 +1,13 @@
+use_frameworks!
+
+platform :ios, '10.0'
+
+target 'WSPieChartSwift_Example' do
+  pod 'WSPieChartSwift', :path => '../'
+
+  target 'WSPieChartSwift_Tests' do
+    inherit! :search_paths
+
+    
+  end
+end

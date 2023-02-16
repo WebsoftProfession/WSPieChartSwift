@@ -1,0 +1,6 @@
+framework module Pods_WSPieChartSwift_Tests {
+  umbrella header "Pods-WSPieChartSwift_Tests-umbrella.h"
+
+  export *
+  module * { export * }
+}

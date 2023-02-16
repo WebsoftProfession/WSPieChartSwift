@@ -1,0 +1,16 @@
+PODS:
+  - WSPieChartSwift (0.1.0)
+
+DEPENDENCIES:
+  - WSPieChartSwift (from `../`)
+
+EXTERNAL SOURCES:
+  WSPieChartSwift:
+    :path: "../"
+
+SPEC CHECKSUMS:
+  WSPieChartSwift: e80e1d38254a16b296e6697a300d28bf8dc71c4c
+
+PODFILE CHECKSUM: f035ee94a6f90989ead30e08e7310b9f8dac6fd7
+
+COCOAPODS: 1.11.3

@@ -1,0 +1,88 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="19455" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+    <device id="retina5_9" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="19454"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--View Controller-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="WSPieChartSwift_Example" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="812"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="niC-RM-rG4" customClass="WSPieChartView" customModule="WSPieChartSwift">
+                                <rect key="frame" x="0.0" y="218.66666666666663" width="375" height="375"/>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" secondItem="niC-RM-rG4" secondAttribute="height" multiplier="1:1" id="fnS-t9-JJt"/>
+                                </constraints>
+                            </view>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="eY9-Ee-VkG">
+                                <rect key="frame" x="112.66666666666669" y="747" width="150" height="31"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="150" id="Dbl-cu-Ibc"/>
+                                </constraints>
+                                <state key="normal" title="Button"/>
+                                <buttonConfiguration key="configuration" style="plain" title="Reload Data"/>
+                                <connections>
+                                    <action selector="reloadClicked:" destination="BYZ-38-t0r" eventType="touchUpInside" id="ILX-hR-WmT"/>
+                                </connections>
+                            </button>
+                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" text="20" borderStyle="roundedRect" placeholder="Part 1" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="kSQ-G0-9bL">
+                                <rect key="frame" x="20" y="64" width="335" height="40"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="40" id="Wed-3v-r1A"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" text="80" borderStyle="roundedRect" placeholder="Part 2" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="HAV-B3-OGg">
+                                <rect key="frame" x="20" y="114" width="335" height="40"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="40" id="9z6-SI-4EZ"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="HAV-B3-OGg" secondAttribute="trailing" constant="20" id="Cof-1V-BFf"/>
+                            <constraint firstItem="kSQ-G0-9bL" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="20" id="GJs-jH-Yxa"/>
+                            <constraint firstItem="niC-RM-rG4" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="HPa-GN-f35"/>
+                            <constraint firstItem="niC-RM-rG4" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" id="JCX-j4-fQU"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="kSQ-G0-9bL" secondAttribute="trailing" constant="20" id="OzZ-ei-WWm"/>
+                            <constraint firstItem="HAV-B3-OGg" firstAttribute="top" secondItem="kSQ-G0-9bL" secondAttribute="bottom" constant="10" id="W4V-h1-vtX"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="niC-RM-rG4" secondAttribute="trailing" id="WhV-4l-wzJ"/>
+                            <constraint firstItem="HAV-B3-OGg" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="20" id="Yc9-SP-BdD"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="eY9-Ee-VkG" secondAttribute="bottom" id="jnR-tw-4ib"/>
+                            <constraint firstItem="eY9-Ee-VkG" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="m5F-r0-If5"/>
+                            <constraint firstItem="niC-RM-rG4" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="mUs-dD-F1z"/>
+                            <constraint firstItem="kSQ-G0-9bL" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="20" id="z4V-FB-gnk"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="chartControl" destination="niC-RM-rG4" id="FEg-4d-izp"/>
+                        <outlet property="txtField1" destination="kSQ-G0-9bL" id="Ge4-Rr-Avf"/>
+                        <outlet property="txtField2" destination="HAV-B3-OGg" id="GWa-Qk-V9o"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="132" y="98"/>
+        </scene>
+    </scenes>
+    <resources>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+    </resources>
+</document>

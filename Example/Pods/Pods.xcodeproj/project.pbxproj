@@ -1,0 +1,779 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		0BAC262AC6B8521BF3428C601E4203B1 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 73010CC983E3809BECEE5348DA1BB8C6 /* Foundation.framework */; };
+		114C71EEE7545FCC4B425BDA4BDCFB9E /* WSPieChartSwift-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = 18D05FF916E424F0FEAC02E66C6DFE0E /* WSPieChartSwift-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		18A14B7B299E08010050B549 /* WSPieChartView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18A14B79299E08010050B549 /* WSPieChartView.swift */; };
+		18A14B7C299E08010050B549 /* WSChartData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18A14B7A299E08010050B549 /* WSChartData.swift */; };
+		1F374C2D68D383E2FB28D4F2F0212525 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 73010CC983E3809BECEE5348DA1BB8C6 /* Foundation.framework */; };
+		54C9CD7FC580BFC1418EF085A72991C2 /* Pods-WSPieChartSwift_Tests-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 902D1A745DA8563E125D097343E55B1A /* Pods-WSPieChartSwift_Tests-dummy.m */; };
+		74B25A029428080E3E851C867B332A16 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 73010CC983E3809BECEE5348DA1BB8C6 /* Foundation.framework */; };
+		76E205999A9F1AD676045F0BCFE955D6 /* Pods-WSPieChartSwift_Example-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = C926496BD5750EB5989C0B902FBA3D18 /* Pods-WSPieChartSwift_Example-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		A031ECFD79543F1D26AB91F3701AD71E /* Pods-WSPieChartSwift_Tests-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = 8D44F3A0D32E289B9502B113AAA116B4 /* Pods-WSPieChartSwift_Tests-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		DB44D2D2FD0E3C583B7DE0B89F8FEDD0 /* Pods-WSPieChartSwift_Example-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 1A571D3FDAEE9E9B90E125419AE593C9 /* Pods-WSPieChartSwift_Example-dummy.m */; };
+		E0628FCAA9A2B58A8DEFEFC4A5EC8B03 /* WSPieChartSwift-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 9BCCD472D4D4B8594CB06D48CD4A75E1 /* WSPieChartSwift-dummy.m */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		5367928658E5303678056DB7A8B68358 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = BFDFE7DC352907FC980B868725387E98 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = B3ADCE4774951A6D9E98AEB2FF7785F0;
+			remoteInfo = "Pods-WSPieChartSwift_Example";
+		};
+		8EA3A0D483F0D7DF33FE5C6A927CD112 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = BFDFE7DC352907FC980B868725387E98 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = EA696F2D78380A6A10091C5D4118D539;
+			remoteInfo = WSPieChartSwift;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		18A14B79299E08010050B549 /* WSPieChartView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = WSPieChartView.swift; path = WSPieChartSwift/Classes/WSPieChartView.swift; sourceTree = "<group>"; };
+		18A14B7A299E08010050B549 /* WSChartData.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = WSChartData.swift; path = WSPieChartSwift/Classes/WSChartData.swift; sourceTree = "<group>"; };
+		18D05FF916E424F0FEAC02E66C6DFE0E /* WSPieChartSwift-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "WSPieChartSwift-umbrella.h"; sourceTree = "<group>"; };
+		1A571D3FDAEE9E9B90E125419AE593C9 /* Pods-WSPieChartSwift_Example-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "Pods-WSPieChartSwift_Example-dummy.m"; sourceTree = "<group>"; };
+		1D7FDD2E5356AD670394E1B7F906FE4B /* Pods-WSPieChartSwift_Example.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.module; path = "Pods-WSPieChartSwift_Example.modulemap"; sourceTree = "<group>"; };
+		2067BC3D27D296B39E70093EE82A3E3D /* WSPieChartSwift-prefix.pch */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "WSPieChartSwift-prefix.pch"; sourceTree = "<group>"; };
+		245F5316C523A3CD06C5F61811B75483 /* WSPieChartSwift.podspec */ = {isa = PBXFileReference; explicitFileType = text.script.ruby; includeInIndex = 1; indentWidth = 2; path = WSPieChartSwift.podspec; sourceTree = "<group>"; tabWidth = 2; xcLanguageSpecificationIdentifier = xcode.lang.ruby; };
+		2DE2E97A4D36694EE32D48728CBCFC46 /* Pods-WSPieChartSwift_Tests */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = "Pods-WSPieChartSwift_Tests"; path = Pods_WSPieChartSwift_Tests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		37892EE7754EE40179A57073A004C954 /* Pods-WSPieChartSwift_Tests.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.module; path = "Pods-WSPieChartSwift_Tests.modulemap"; sourceTree = "<group>"; };
+		478E43A717699DA903E4FFD8915DD8D9 /* WSPieChartSwift-Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "WSPieChartSwift-Info.plist"; sourceTree = "<group>"; };
+		5059C32FEBE870CB90012ED18F716F02 /* Pods-WSPieChartSwift_Tests-acknowledgements.markdown */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; path = "Pods-WSPieChartSwift_Tests-acknowledgements.markdown"; sourceTree = "<group>"; };
+		5234F21889559C09952129BC2C0FA22A /* Pods-WSPieChartSwift_Tests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-WSPieChartSwift_Tests.release.xcconfig"; sourceTree = "<group>"; };
+		5F8FF38F5621CB410B752273285D7570 /* Pods-WSPieChartSwift_Example-frameworks.sh */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; path = "Pods-WSPieChartSwift_Example-frameworks.sh"; sourceTree = "<group>"; };
+		68AE19039C48FF4B532858E3A76C91D1 /* Pods-WSPieChartSwift_Example */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = "Pods-WSPieChartSwift_Example"; path = Pods_WSPieChartSwift_Example.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		73010CC983E3809BECEE5348DA1BB8C6 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS14.0.sdk/System/Library/Frameworks/Foundation.framework; sourceTree = DEVELOPER_DIR; };
+		7DF79112BE4BF96D69161B6BD88CDAF1 /* Pods-WSPieChartSwift_Example-acknowledgements.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-WSPieChartSwift_Example-acknowledgements.plist"; sourceTree = "<group>"; };
+		7E920A8B69AD34038F1C978BC079047E /* LICENSE */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; path = LICENSE; sourceTree = "<group>"; };
+		85C91C8BABD4782D71C48EF905207F9A /* Pods-WSPieChartSwift_Tests-acknowledgements.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-WSPieChartSwift_Tests-acknowledgements.plist"; sourceTree = "<group>"; };
+		880C8F8E253BA3732C571619A93BD991 /* Pods-WSPieChartSwift_Example-Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-WSPieChartSwift_Example-Info.plist"; sourceTree = "<group>"; };
+		8AD6EBEC57F25DE4DEB4588DC483DEF6 /* Pods-WSPieChartSwift_Example.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-WSPieChartSwift_Example.release.xcconfig"; sourceTree = "<group>"; };
+		8D44F3A0D32E289B9502B113AAA116B4 /* Pods-WSPieChartSwift_Tests-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "Pods-WSPieChartSwift_Tests-umbrella.h"; sourceTree = "<group>"; };
+		8EDE98CAF97CB2E2DE2FD1617AC728DF /* WSPieChartSwift.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.module; path = WSPieChartSwift.modulemap; sourceTree = "<group>"; };
+		8FE8E0DF70441010B759BD2AABC0C85F /* WSPieChartSwift.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = WSPieChartSwift.release.xcconfig; sourceTree = "<group>"; };
+		902D1A745DA8563E125D097343E55B1A /* Pods-WSPieChartSwift_Tests-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "Pods-WSPieChartSwift_Tests-dummy.m"; sourceTree = "<group>"; };
+		98EF570D590EE3B122B11F298ABD1663 /* Pods-WSPieChartSwift_Tests-Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-WSPieChartSwift_Tests-Info.plist"; sourceTree = "<group>"; };
+		9BCCD472D4D4B8594CB06D48CD4A75E1 /* WSPieChartSwift-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "WSPieChartSwift-dummy.m"; sourceTree = "<group>"; };
+		9D940727FF8FB9C785EB98E56350EF41 /* Podfile */ = {isa = PBXFileReference; explicitFileType = text.script.ruby; includeInIndex = 1; indentWidth = 2; name = Podfile; path = ../Podfile; sourceTree = SOURCE_ROOT; tabWidth = 2; xcLanguageSpecificationIdentifier = xcode.lang.ruby; };
+		B4922E45A18F171E42AE1AF616A362A3 /* Pods-WSPieChartSwift_Example.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-WSPieChartSwift_Example.debug.xcconfig"; sourceTree = "<group>"; };
+		C926496BD5750EB5989C0B902FBA3D18 /* Pods-WSPieChartSwift_Example-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "Pods-WSPieChartSwift_Example-umbrella.h"; sourceTree = "<group>"; };
+		D98316EB20AF5EA1038B8FC82FBD5894 /* README.md */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = net.daringfireball.markdown; path = README.md; sourceTree = "<group>"; };
+		DBC646B2DA5352B821B7A002E5F3D8D7 /* Pods-WSPieChartSwift_Example-acknowledgements.markdown */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; path = "Pods-WSPieChartSwift_Example-acknowledgements.markdown"; sourceTree = "<group>"; };
+		DD275DDE00E1CDF6E4AE1061CE4AD0FF /* Pods-WSPieChartSwift_Tests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-WSPieChartSwift_Tests.debug.xcconfig"; sourceTree = "<group>"; };
+		F00723759ED4F745F717299FC27DDE5D /* WSPieChartSwift.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = WSPieChartSwift.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		FA4B203C3FA51477E093108707EA7023 /* WSPieChartSwift.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = WSPieChartSwift.debug.xcconfig; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		782A8095CD3E0096E45E29E580579180 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				74B25A029428080E3E851C867B332A16 /* Foundation.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		901E86F37487D7182915BAF33FE5F65A /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				0BAC262AC6B8521BF3428C601E4203B1 /* Foundation.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		EC3489CB0BCB8F19DBE28A28074DE4B9 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				1F374C2D68D383E2FB28D4F2F0212525 /* Foundation.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		1AE1BDAD3320815720C67436EA11C927 /* Development Pods */ = {
+			isa = PBXGroup;
+			children = (
+				E1B38D3F6197F26BF35AEC699F5E359A /* WSPieChartSwift */,
+			);
+			name = "Development Pods";
+			sourceTree = "<group>";
+		};
+		578452D2E740E91742655AC8F1636D1F /* iOS */ = {
+			isa = PBXGroup;
+			children = (
+				73010CC983E3809BECEE5348DA1BB8C6 /* Foundation.framework */,
+			);
+			name = iOS;
+			sourceTree = "<group>";
+		};
+		5CE1E80826C8E712F0036644C12FD813 /* Support Files */ = {
+			isa = PBXGroup;
+			children = (
+				8EDE98CAF97CB2E2DE2FD1617AC728DF /* WSPieChartSwift.modulemap */,
+				9BCCD472D4D4B8594CB06D48CD4A75E1 /* WSPieChartSwift-dummy.m */,
+				478E43A717699DA903E4FFD8915DD8D9 /* WSPieChartSwift-Info.plist */,
+				2067BC3D27D296B39E70093EE82A3E3D /* WSPieChartSwift-prefix.pch */,
+				18D05FF916E424F0FEAC02E66C6DFE0E /* WSPieChartSwift-umbrella.h */,
+				FA4B203C3FA51477E093108707EA7023 /* WSPieChartSwift.debug.xcconfig */,
+				8FE8E0DF70441010B759BD2AABC0C85F /* WSPieChartSwift.release.xcconfig */,
+			);
+			name = "Support Files";
+			path = "Example/Pods/Target Support Files/WSPieChartSwift";
+			sourceTree = "<group>";
+		};
+		73163A0E984C221A8071C2442641731B /* Pods-WSPieChartSwift_Tests */ = {
+			isa = PBXGroup;
+			children = (
+				37892EE7754EE40179A57073A004C954 /* Pods-WSPieChartSwift_Tests.modulemap */,
+				5059C32FEBE870CB90012ED18F716F02 /* Pods-WSPieChartSwift_Tests-acknowledgements.markdown */,
+				85C91C8BABD4782D71C48EF905207F9A /* Pods-WSPieChartSwift_Tests-acknowledgements.plist */,
+				902D1A745DA8563E125D097343E55B1A /* Pods-WSPieChartSwift_Tests-dummy.m */,
+				98EF570D590EE3B122B11F298ABD1663 /* Pods-WSPieChartSwift_Tests-Info.plist */,
+				8D44F3A0D32E289B9502B113AAA116B4 /* Pods-WSPieChartSwift_Tests-umbrella.h */,
+				DD275DDE00E1CDF6E4AE1061CE4AD0FF /* Pods-WSPieChartSwift_Tests.debug.xcconfig */,
+				5234F21889559C09952129BC2C0FA22A /* Pods-WSPieChartSwift_Tests.release.xcconfig */,
+			);
+			name = "Pods-WSPieChartSwift_Tests";
+			path = "Target Support Files/Pods-WSPieChartSwift_Tests";
+			sourceTree = "<group>";
+		};
+		7C58AC769F47780D005970C639B1968B /* Pods-WSPieChartSwift_Example */ = {
+			isa = PBXGroup;
+			children = (
+				1D7FDD2E5356AD670394E1B7F906FE4B /* Pods-WSPieChartSwift_Example.modulemap */,
+				DBC646B2DA5352B821B7A002E5F3D8D7 /* Pods-WSPieChartSwift_Example-acknowledgements.markdown */,
+				7DF79112BE4BF96D69161B6BD88CDAF1 /* Pods-WSPieChartSwift_Example-acknowledgements.plist */,
+				1A571D3FDAEE9E9B90E125419AE593C9 /* Pods-WSPieChartSwift_Example-dummy.m */,
+				5F8FF38F5621CB410B752273285D7570 /* Pods-WSPieChartSwift_Example-frameworks.sh */,
+				880C8F8E253BA3732C571619A93BD991 /* Pods-WSPieChartSwift_Example-Info.plist */,
+				C926496BD5750EB5989C0B902FBA3D18 /* Pods-WSPieChartSwift_Example-umbrella.h */,
+				B4922E45A18F171E42AE1AF616A362A3 /* Pods-WSPieChartSwift_Example.debug.xcconfig */,
+				8AD6EBEC57F25DE4DEB4588DC483DEF6 /* Pods-WSPieChartSwift_Example.release.xcconfig */,
+			);
+			name = "Pods-WSPieChartSwift_Example";
+			path = "Target Support Files/Pods-WSPieChartSwift_Example";
+			sourceTree = "<group>";
+		};
+		B5660A762A68E1AD2213B117B7A0CB50 /* Pod */ = {
+			isa = PBXGroup;
+			children = (
+				7E920A8B69AD34038F1C978BC079047E /* LICENSE */,
+				D98316EB20AF5EA1038B8FC82FBD5894 /* README.md */,
+				245F5316C523A3CD06C5F61811B75483 /* WSPieChartSwift.podspec */,
+			);
+			name = Pod;
+			sourceTree = "<group>";
+		};
+		CF1408CF629C7361332E53B88F7BD30C = {
+			isa = PBXGroup;
+			children = (
+				9D940727FF8FB9C785EB98E56350EF41 /* Podfile */,
+				1AE1BDAD3320815720C67436EA11C927 /* Development Pods */,
+				D210D550F4EA176C3123ED886F8F87F5 /* Frameworks */,
+				ED43B2D54EFD188BE99DC6542BBAB7D4 /* Products */,
+				E5318803912BA1203B2654933C84BCA3 /* Targets Support Files */,
+			);
+			sourceTree = "<group>";
+		};
+		D210D550F4EA176C3123ED886F8F87F5 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				578452D2E740E91742655AC8F1636D1F /* iOS */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		E1B38D3F6197F26BF35AEC699F5E359A /* WSPieChartSwift */ = {
+			isa = PBXGroup;
+			children = (
+				18A14B79299E08010050B549 /* WSPieChartView.swift */,
+				18A14B7A299E08010050B549 /* WSChartData.swift */,
+				B5660A762A68E1AD2213B117B7A0CB50 /* Pod */,
+				5CE1E80826C8E712F0036644C12FD813 /* Support Files */,
+			);
+			name = WSPieChartSwift;
+			path = ../..;
+			sourceTree = "<group>";
+		};
+		E5318803912BA1203B2654933C84BCA3 /* Targets Support Files */ = {
+			isa = PBXGroup;
+			children = (
+				7C58AC769F47780D005970C639B1968B /* Pods-WSPieChartSwift_Example */,
+				73163A0E984C221A8071C2442641731B /* Pods-WSPieChartSwift_Tests */,
+			);
+			name = "Targets Support Files";
+			sourceTree = "<group>";
+		};
+		ED43B2D54EFD188BE99DC6542BBAB7D4 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				68AE19039C48FF4B532858E3A76C91D1 /* Pods-WSPieChartSwift_Example */,
+				2DE2E97A4D36694EE32D48728CBCFC46 /* Pods-WSPieChartSwift_Tests */,
+				F00723759ED4F745F717299FC27DDE5D /* WSPieChartSwift.framework */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXHeadersBuildPhase section */
+		1F4E8E5F8C6819BC09455BB526ADF4E2 /* Headers */ = {
+			isa = PBXHeadersBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				76E205999A9F1AD676045F0BCFE955D6 /* Pods-WSPieChartSwift_Example-umbrella.h in Headers */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		E501528A7C1BE10D7D3E3262ED2D6DA1 /* Headers */ = {
+			isa = PBXHeadersBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				A031ECFD79543F1D26AB91F3701AD71E /* Pods-WSPieChartSwift_Tests-umbrella.h in Headers */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		EDECA0A7AAE60ACC9571CAAACF8ED055 /* Headers */ = {
+			isa = PBXHeadersBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				114C71EEE7545FCC4B425BDA4BDCFB9E /* WSPieChartSwift-umbrella.h in Headers */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXHeadersBuildPhase section */
+
+/* Begin PBXNativeTarget section */
+		4BE3387FF1DE35E7A3315449BAF27C70 /* Pods-WSPieChartSwift_Tests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = B8549E02FE50081125FE3EACB0B3C612 /* Build configuration list for PBXNativeTarget "Pods-WSPieChartSwift_Tests" */;
+			buildPhases = (
+				E501528A7C1BE10D7D3E3262ED2D6DA1 /* Headers */,
+				2D2E8617FB462D8498D966171D217D4D /* Sources */,
+				EC3489CB0BCB8F19DBE28A28074DE4B9 /* Frameworks */,
+				E09D07CA3C1D618DE283E344AF1B1D42 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				A622C7FB991D544AD9B0529952FAB952 /* PBXTargetDependency */,
+			);
+			name = "Pods-WSPieChartSwift_Tests";
+			productName = Pods_WSPieChartSwift_Tests;
+			productReference = 2DE2E97A4D36694EE32D48728CBCFC46 /* Pods-WSPieChartSwift_Tests */;
+			productType = "com.apple.product-type.framework";
+		};
+		B3ADCE4774951A6D9E98AEB2FF7785F0 /* Pods-WSPieChartSwift_Example */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = EA560409C286EF586F3FA9DD568596A7 /* Build configuration list for PBXNativeTarget "Pods-WSPieChartSwift_Example" */;
+			buildPhases = (
+				1F4E8E5F8C6819BC09455BB526ADF4E2 /* Headers */,
+				BABF0E669F96357D0D4059C6E330B575 /* Sources */,
+				901E86F37487D7182915BAF33FE5F65A /* Frameworks */,
+				F6D20ED1FE8D97C9516346CD13F9E422 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				6BC48F980DC6B52ADBD52DD8A61C9516 /* PBXTargetDependency */,
+			);
+			name = "Pods-WSPieChartSwift_Example";
+			productName = Pods_WSPieChartSwift_Example;
+			productReference = 68AE19039C48FF4B532858E3A76C91D1 /* Pods-WSPieChartSwift_Example */;
+			productType = "com.apple.product-type.framework";
+		};
+		EA696F2D78380A6A10091C5D4118D539 /* WSPieChartSwift */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = B34C545968802F98CEBD308B80E6DAB9 /* Build configuration list for PBXNativeTarget "WSPieChartSwift" */;
+			buildPhases = (
+				EDECA0A7AAE60ACC9571CAAACF8ED055 /* Headers */,
+				977533E1F9908A67A7D8B9DF7EAD02A5 /* Sources */,
+				782A8095CD3E0096E45E29E580579180 /* Frameworks */,
+				D6F64E68C1E9CE800340A1D3E0780F06 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = WSPieChartSwift;
+			productName = WSPieChartSwift;
+			productReference = F00723759ED4F745F717299FC27DDE5D /* WSPieChartSwift.framework */;
+			productType = "com.apple.product-type.framework";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		BFDFE7DC352907FC980B868725387E98 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastSwiftUpdateCheck = 1240;
+				LastUpgradeCheck = 1240;
+			};
+			buildConfigurationList = 4821239608C13582E20E6DA73FD5F1F9 /* Build configuration list for PBXProject "Pods" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				Base,
+				en,
+			);
+			mainGroup = CF1408CF629C7361332E53B88F7BD30C;
+			productRefGroup = ED43B2D54EFD188BE99DC6542BBAB7D4 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				B3ADCE4774951A6D9E98AEB2FF7785F0 /* Pods-WSPieChartSwift_Example */,
+				4BE3387FF1DE35E7A3315449BAF27C70 /* Pods-WSPieChartSwift_Tests */,
+				EA696F2D78380A6A10091C5D4118D539 /* WSPieChartSwift */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		D6F64E68C1E9CE800340A1D3E0780F06 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		E09D07CA3C1D618DE283E344AF1B1D42 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		F6D20ED1FE8D97C9516346CD13F9E422 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		2D2E8617FB462D8498D966171D217D4D /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				54C9CD7FC580BFC1418EF085A72991C2 /* Pods-WSPieChartSwift_Tests-dummy.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		977533E1F9908A67A7D8B9DF7EAD02A5 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				18A14B7B299E08010050B549 /* WSPieChartView.swift in Sources */,
+				18A14B7C299E08010050B549 /* WSChartData.swift in Sources */,
+				E0628FCAA9A2B58A8DEFEFC4A5EC8B03 /* WSPieChartSwift-dummy.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		BABF0E669F96357D0D4059C6E330B575 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				DB44D2D2FD0E3C583B7DE0B89F8FEDD0 /* Pods-WSPieChartSwift_Example-dummy.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		6BC48F980DC6B52ADBD52DD8A61C9516 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			name = WSPieChartSwift;
+			target = EA696F2D78380A6A10091C5D4118D539 /* WSPieChartSwift */;
+			targetProxy = 8EA3A0D483F0D7DF33FE5C6A927CD112 /* PBXContainerItemProxy */;
+		};
+		A622C7FB991D544AD9B0529952FAB952 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			name = "Pods-WSPieChartSwift_Example";
+			target = B3ADCE4774951A6D9E98AEB2FF7785F0 /* Pods-WSPieChartSwift_Example */;
+			targetProxy = 5367928658E5303678056DB7A8B68358 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin XCBuildConfiguration section */
+		0D2660E16A8311369DB2FD1372468090 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = B4922E45A18F171E42AE1AF616A362A3 /* Pods-WSPieChartSwift_Example.debug.xcconfig */;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = NO;
+				CLANG_ENABLE_OBJC_WEAK = NO;
+				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
+				CURRENT_PROJECT_VERSION = 1;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				INFOPLIST_FILE = "Target Support Files/Pods-WSPieChartSwift_Example/Pods-WSPieChartSwift_Example-Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				MACH_O_TYPE = staticlib;
+				MODULEMAP_FILE = "Target Support Files/Pods-WSPieChartSwift_Example/Pods-WSPieChartSwift_Example.modulemap";
+				OTHER_LDFLAGS = "";
+				OTHER_LIBTOOLFLAGS = "";
+				PODS_ROOT = "$(SRCROOT)";
+				PRODUCT_BUNDLE_IDENTIFIER = "org.cocoapods.${PRODUCT_NAME:rfc1034identifier}";
+				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Debug;
+		};
+		37B7D3CB218358294BB651245B7241DB /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 8FE8E0DF70441010B759BD2AABC0C85F /* WSPieChartSwift.release.xcconfig */;
+			buildSettings = {
+				CLANG_ENABLE_OBJC_WEAK = NO;
+				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
+				CURRENT_PROJECT_VERSION = 1;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				GCC_PREFIX_HEADER = "Target Support Files/WSPieChartSwift/WSPieChartSwift-prefix.pch";
+				INFOPLIST_FILE = "Target Support Files/WSPieChartSwift/WSPieChartSwift-Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				MODULEMAP_FILE = "Target Support Files/WSPieChartSwift/WSPieChartSwift.modulemap";
+				PRODUCT_MODULE_NAME = WSPieChartSwift;
+				PRODUCT_NAME = WSPieChartSwift;
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "$(inherited) ";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VALIDATE_PRODUCT = YES;
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Release;
+		};
+		470E1CC563E387434EB0C3BEB2765B9F /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = FA4B203C3FA51477E093108707EA7023 /* WSPieChartSwift.debug.xcconfig */;
+			buildSettings = {
+				CLANG_ENABLE_OBJC_WEAK = NO;
+				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
+				CURRENT_PROJECT_VERSION = 1;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				GCC_PREFIX_HEADER = "Target Support Files/WSPieChartSwift/WSPieChartSwift-prefix.pch";
+				INFOPLIST_FILE = "Target Support Files/WSPieChartSwift/WSPieChartSwift-Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				MODULEMAP_FILE = "Target Support Files/WSPieChartSwift/WSPieChartSwift.modulemap";
+				PRODUCT_MODULE_NAME = WSPieChartSwift;
+				PRODUCT_NAME = WSPieChartSwift;
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "$(inherited) ";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Debug;
+		};
+		57AECC3BC804E6CB9D96B6BA2B049370 /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 8AD6EBEC57F25DE4DEB4588DC483DEF6 /* Pods-WSPieChartSwift_Example.release.xcconfig */;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = NO;
+				CLANG_ENABLE_OBJC_WEAK = NO;
+				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
+				CURRENT_PROJECT_VERSION = 1;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				INFOPLIST_FILE = "Target Support Files/Pods-WSPieChartSwift_Example/Pods-WSPieChartSwift_Example-Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				MACH_O_TYPE = staticlib;
+				MODULEMAP_FILE = "Target Support Files/Pods-WSPieChartSwift_Example/Pods-WSPieChartSwift_Example.modulemap";
+				OTHER_LDFLAGS = "";
+				OTHER_LIBTOOLFLAGS = "";
+				PODS_ROOT = "$(SRCROOT)";
+				PRODUCT_BUNDLE_IDENTIFIER = "org.cocoapods.${PRODUCT_NAME:rfc1034identifier}";
+				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VALIDATE_PRODUCT = YES;
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Release;
+		};
+		7EE7A78859F657F6BEFC651185B43192 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_LOCALIZABILITY_NONLOCALIZED = YES;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"POD_CONFIGURATION_RELEASE=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				MTL_FAST_MATH = YES;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				STRIP_INSTALLED_PRODUCT = NO;
+				SWIFT_OPTIMIZATION_LEVEL = "-Owholemodule";
+				SWIFT_VERSION = 5.0;
+				SYMROOT = "${SRCROOT}/../build";
+			};
+			name = Release;
+		};
+		BB7E30788839EC40F313A13654C2AD12 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = DD275DDE00E1CDF6E4AE1061CE4AD0FF /* Pods-WSPieChartSwift_Tests.debug.xcconfig */;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = NO;
+				CLANG_ENABLE_OBJC_WEAK = NO;
+				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
+				CURRENT_PROJECT_VERSION = 1;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				INFOPLIST_FILE = "Target Support Files/Pods-WSPieChartSwift_Tests/Pods-WSPieChartSwift_Tests-Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				MACH_O_TYPE = staticlib;
+				MODULEMAP_FILE = "Target Support Files/Pods-WSPieChartSwift_Tests/Pods-WSPieChartSwift_Tests.modulemap";
+				OTHER_LDFLAGS = "";
+				OTHER_LIBTOOLFLAGS = "";
+				PODS_ROOT = "$(SRCROOT)";
+				PRODUCT_BUNDLE_IDENTIFIER = "org.cocoapods.${PRODUCT_NAME:rfc1034identifier}";
+				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Debug;
+		};
+		D0A1C31CDEF27FEF88DB5F3DEC9AC5CE /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 5234F21889559C09952129BC2C0FA22A /* Pods-WSPieChartSwift_Tests.release.xcconfig */;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = NO;
+				CLANG_ENABLE_OBJC_WEAK = NO;
+				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
+				CURRENT_PROJECT_VERSION = 1;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				INFOPLIST_FILE = "Target Support Files/Pods-WSPieChartSwift_Tests/Pods-WSPieChartSwift_Tests-Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				MACH_O_TYPE = staticlib;
+				MODULEMAP_FILE = "Target Support Files/Pods-WSPieChartSwift_Tests/Pods-WSPieChartSwift_Tests.modulemap";
+				OTHER_LDFLAGS = "";
+				OTHER_LIBTOOLFLAGS = "";
+				PODS_ROOT = "$(SRCROOT)";
+				PRODUCT_BUNDLE_IDENTIFIER = "org.cocoapods.${PRODUCT_NAME:rfc1034identifier}";
+				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VALIDATE_PRODUCT = YES;
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Release;
+		};
+		D299434AB35E7FD6F7921C8EF24742FF /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_LOCALIZABILITY_NONLOCALIZED = YES;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"POD_CONFIGURATION_DEBUG=1",
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
+				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
+				MTL_FAST_MATH = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				STRIP_INSTALLED_PRODUCT = NO;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				SWIFT_VERSION = 5.0;
+				SYMROOT = "${SRCROOT}/../build";
+			};
+			name = Debug;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		4821239608C13582E20E6DA73FD5F1F9 /* Build configuration list for PBXProject "Pods" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				D299434AB35E7FD6F7921C8EF24742FF /* Debug */,
+				7EE7A78859F657F6BEFC651185B43192 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		B34C545968802F98CEBD308B80E6DAB9 /* Build configuration list for PBXNativeTarget "WSPieChartSwift" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				470E1CC563E387434EB0C3BEB2765B9F /* Debug */,
+				37B7D3CB218358294BB651245B7241DB /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		B8549E02FE50081125FE3EACB0B3C612 /* Build configuration list for PBXNativeTarget "Pods-WSPieChartSwift_Tests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				BB7E30788839EC40F313A13654C2AD12 /* Debug */,
+				D0A1C31CDEF27FEF88DB5F3DEC9AC5CE /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		EA560409C286EF586F3FA9DD568596A7 /* Build configuration list for PBXNativeTarget "Pods-WSPieChartSwift_Example" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				0D2660E16A8311369DB2FD1372468090 /* Debug */,
+				57AECC3BC804E6CB9D96B6BA2B049370 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = BFDFE7DC352907FC980B868725387E98 /* Project object */;
+}

@@ -1,0 +1,6 @@
+framework module WSPieChartSwift {
+  umbrella header "WSPieChartSwift-umbrella.h"
+
+  export *
+  module * { export * }
+}
