@@ -176,12 +176,14 @@ public class WSPieChartView: UIView {
     public func reloadData(){
         animationDataValue.removeAll()
         activeIndex = -1
-        let count = self.delegate?.numberOfDataInChart() ?? 0
-        for index in 0..<count {
-            let newValue = self.delegate?.valueForDataInChart(for: index).value ?? 0.0
-            let oldValue = previousData[index]
-            let ratioValue = newValue - oldValue
-            animationDataValue.append(Double(ratioValue))
+        if previousData.count != 0 {
+            let count = self.delegate?.numberOfDataInChart() ?? 0
+            for index in 0..<count {
+                let newValue = self.delegate?.valueForDataInChart(for: index).value ?? 0.0
+                let oldValue = previousData[index]
+                let ratioValue = newValue - oldValue
+                animationDataValue.append(Double(ratioValue))
+            }
         }
         
         if timer != nil {
