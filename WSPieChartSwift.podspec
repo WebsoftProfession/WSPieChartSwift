@@ -8,7 +8,7 @@
 
 Pod::Spec.new do |s|
   s.name             = 'WSPieChartSwift'
-  s.version          = '1.0.1'
+  s.version          = '1.0.2'
   s.summary          = 'A pie chart control, can be used as EMI calculator or any equivalent.'
   s.swift_version = '5.0'
 

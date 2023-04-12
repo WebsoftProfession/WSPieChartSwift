@@ -205,6 +205,9 @@ public class WSPieChartView: UIView {
         }
         if self.isAnimationCompleted {
             timer?.invalidate()
+            if self.animationDataValue.count == 0 {
+                self.setNeedsDisplay()
+            }
         }
         else{
             self.setNeedsDisplay()
