@@ -27,13 +27,15 @@ class ViewController: UIViewController {
         chartControl.titleColor = .white
         chartDataArray.append(WSChartData(value: 20, color: .systemGreen, title: "20%"))
         chartDataArray.append(WSChartData(value: 80, color: .systemRed, title: "80%"))
+        
     }
     
     @IBAction func reloadClicked(_ sender: Any) {
         self.view.endEditing(true)
         chartDataArray.removeAll()
-        chartDataArray.append(WSChartData(value: Float(txtField1.text ?? "0") ?? 0.0, color: .systemGreen, title: "\(txtField1.text ?? "0")%"))
-        chartDataArray.append(WSChartData(value: Float(txtField2.text ?? "0") ?? 0.0, color: .systemRed, title: "\(txtField2.text ?? "0")%"))
+        chartDataArray.append(WSChartData(value: Double(txtField1.text ?? "0") ?? 0.0, color: .systemGreen, title: "\(txtField1.text ?? "0")%"))
+        chartDataArray.append(WSChartData(value: Double(txtField2.text ?? "0") ?? 0.0, color: .systemRed, title: "\(txtField2.text ?? "0")%"))
+        chartDataArray.append(WSChartData(value: 70.0, color: .systemPurple, title: "70%"))
         chartControl.reloadData()
     }
 
@@ -46,16 +48,16 @@ class ViewController: UIViewController {
 
 extension ViewController: WSPieChartViewDelegate {
     
-    func numberOfDataInChart() -> Int {
-        return chartDataArray.count
-    }
-    
     func valueForDataInChart(for index: Int) -> WSChartData {
         return chartDataArray[index]
     }
     
     func didSelectChartIndex(index: Int) {
         // Show some more detailed information anywhere on screen for selected aread index
+    }
+    
+    func datasetForChart() -> [WSChartData] {
+        chartDataArray
     }
 }
 

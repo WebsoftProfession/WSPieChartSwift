@@ -9,12 +9,13 @@ import Foundation
 import UIKit
 
 
-public struct WSChartData {
-    let value: Float
+public struct WSChartData: Equatable {
+    let id = UUID()
+    let value: Double
     let color: UIColor
     let title: String?
     
-    public init(value:Float, color: UIColor, title: String = ""){
+    public init(value:Double, color: UIColor, title: String = ""){
         self.value = value
         self.color = color
         self.title = title
