@@ -38,8 +38,11 @@ public class WSPieChartView: UIView {
     
     private var arcPaths = [UIBezierPath]()
     private var activeIndex = -1
-    
+    var isInitialStage = true
     private var totalCalculatedValue:Double = 100.0
+    
+    private var variationIncreaseDecrease:Double = 0.0
+    
     /*
      // Only override draw() if you perform custom drawing.
      public  // An empty implementation adversely affects performance during animation.*/
@@ -51,14 +54,14 @@ public class WSPieChartView: UIView {
         let insetRect = rect.inset(by: .init(top: 40, left: 40, bottom: 40, right: 40))
         arcPaths.removeAll()
         previousEndData = 0.0
-        previousData = [Double]()
+        
         var startData = 0.0
         var endData = 0.0
         var centerPoint = CGPoint.zero
-        var isInitialStage = false
         
-        if animationDataValue.count == 0 {
-            isInitialStage = true
+        
+        if isInitialStage {
+            previousData.removeAll()
         }
         
         if let datasets = self.delegate?.datasetForChart() {
@@ -69,24 +72,89 @@ public class WSPieChartView: UIView {
         for dataset in self.delegate?.datasetForChart() ?? [] {
             let index = self.delegate!.datasetForChart().firstIndex(of: dataset)
             let arcPath = UIBezierPath()
-            if index == 0 {
-                startData = 0
-            }
-            else{
-                let previousDataset = self.delegate!.datasetForChart()[index! - 1]
-                startData += (previousDataset.value / totalCalculatedValue) * 100
-            }
-            
             centerPoint = CGPoint.init(x: insetRect.midX, y: insetRect.midY)
-            endData = (dataset.value / totalCalculatedValue) * 100
             
-            endData += startData
-            endData = round(endData)
-            if endData > 100 || (index == self.delegate!.datasetForChart().count - 1 && endData < 100) {
-                endData = 100
-//                    assertionFailure("Invalid chart data")
+            if isInitialStage {
+                if index == 0 {
+                    startData = 0
+                }
+                else{
+                    let previousDataset = self.delegate!.datasetForChart()[index! - 1]
+                    startData += (previousDataset.value / totalCalculatedValue) * 100
+                }
+                
+                endData = (dataset.value / totalCalculatedValue) * 100
+                endData += startData
+                endData = round(endData)
+                previousData.append(round((dataset.value / totalCalculatedValue) * 100))
             }
-            
+            else {
+                if index == 0 {
+                    startData = 0
+                    endData = startData + round((dataset.value / totalCalculatedValue) * 100)
+                }
+                else{
+//                    let previousDataset = self.delegate!.datasetForChart()[index! - 1]
+//                    startData += (previousDataset.value / totalCalculatedValue) * 100
+                    
+                    startData += round(previousData[index! - 1])
+                    
+                    endData = round((dataset.value / totalCalculatedValue) * 100)
+                    
+//                    if index! == (self.delegate!.datasetForChart().count-1)  {
+//                        endData = 100 - startData
+//                    }
+//                    else {
+//                        endData = round((dataset.value / totalCalculatedValue) * 100)
+//                    }
+                }
+                
+                if previousData[index!] != endData {
+                    if previousData[index!] > endData  {
+                        // need to decrease
+                        if variationIncreaseDecrease > 0 {
+                            previousData[index!] -= (1 + variationIncreaseDecrease)
+                        }
+                        else {
+                            previousData[index!] -= 1
+                        }
+                        if previousData[index!] < endData {
+                            previousData[index!] = endData
+                        }
+                        else {
+                            endData = previousData[index!]
+                        }
+                    }
+                    else {
+                        // need to increase
+                        if variationIncreaseDecrease > 0 {
+                            previousData[index!] += 1
+                        }
+                        else {
+                            previousData[index!] += (1 + (variationIncreaseDecrease * -1))
+                        }
+                        
+                        if previousData[index!] > endData {
+                            previousData[index!] = endData
+                        }
+                        else {
+                            endData = previousData[index!]
+                        }
+                    }
+                    
+                    endData += startData
+                    print("StartData: \(startData)")
+                    print("EndData: \(endData)")
+                }
+                else {
+                    endData = previousData[index!]
+                    endData += startData
+                    print("StartData: \(startData)")
+                    print("EndData: \(endData)")
+                }
+            }
+
+            /*
             if isInitialStage {
                 animationDataValue.append(0.0)
             }
@@ -106,35 +174,47 @@ public class WSPieChartView: UIView {
                         }
                     }
                     else{
-                        if endData >= 100 {
-                            endData = 100
-                            if animationDataValue[index!] > 0 {
-                                animationDataValue[index!] -= 1
-                                startData += animationDataValue[index!]
-                            }
-                            else{
-                                animationDataValue[index!] += 1
-                                startData += animationDataValue[index!]
-                            }
+//                        if endData >= 100 {
+//                            endData = 100
+//                            if animationDataValue[index!] > 0 {
+//                                animationDataValue[index!] -= 1
+//                                startData += animationDataValue[index!]
+//                            }
+//                            else{
+//                                animationDataValue[index!] += 1
+//                                startData += animationDataValue[index!]
+//                            }
+//                        }
+//                        else{
+//                            startData = previousEndData
+//                            if animationDataValue[index!] > 0 {
+//                                // increase case
+//                                animationDataValue[index!] -= 1
+//                                endData += animationDataValue[index!]
+//                            }
+//                            else{
+//                                // decrease case
+//                                animationDataValue[index!] += 1
+//                                endData -= 1
+//                            }
+//                        }
+                        
+                        startData = previousEndData
+                        if animationDataValue[index!] > 0 {
+                            // increase case
+                            animationDataValue[index!] -= 1
+                            endData += animationDataValue[index!]
                         }
                         else{
-                            startData = previousEndData
-                            if animationDataValue[index!] > 0 {
-                                // increase case
-                                animationDataValue[index!] -= 1
-                                endData += animationDataValue[index!]
-                            }
-                            else{
-                                // decrease case
-                                animationDataValue[index!] += 1
-                                endData -= 1
-                            }
+                            // decrease case
+                            animationDataValue[index!] += 1
+                            endData -= 1
                         }
                     }
                 }
-            }
+            }*/
             
-            previousData.append(round((dataset.value / totalCalculatedValue) * 100))
+            
             let midPointArc = self.getMidPointOfArc(withStartValue: Float(startData), andEndValue: Float(endData), andCenter: centerPoint, andRadious: 3)
             arcPath.move(to: midPointArc)
             
@@ -182,21 +262,38 @@ public class WSPieChartView: UIView {
         
         animationDataValue.removeAll()
         activeIndex = -1
+        
+        var decreaseCount = 0.0
+        var increaseCount = 0.0
+        
         if previousData.count ==  (self.delegate?.datasetForChart() ?? []).count {
+            isInitialStage = false
             if let datasets = self.delegate?.datasetForChart() {
                 totalCalculatedValue = round(datasets.compactMap({ $0.value }).reduce(0.0, +))
             }
+            
+            var variation = 100 / (self.delegate?.datasetForChart() ?? []).count
+            
             for dataset in self.delegate?.datasetForChart() ?? [] {
                 let index = self.delegate!.datasetForChart().firstIndex(of: dataset)
                 let newValue = round((dataset.value / totalCalculatedValue) * 100)
                 let oldValue = previousData[index!]
                 let ratioValue = newValue - oldValue
+                if ratioValue < 0 {
+                    decreaseCount += 1
+                }
+                else {
+                    increaseCount += 1
+                }
+//                previousData[index!] = newValue
                 animationDataValue.append(Double(ratioValue))
             }
         }
         else {
-            previousData.removeAll()
+            isInitialStage = true
         }
+        
+        variationIncreaseDecrease = increaseCount - decreaseCount
         
         
         if timer != nil {
@@ -211,16 +308,43 @@ public class WSPieChartView: UIView {
     @objc private func runAnimation(){
         
         self.isAnimationCompleted = true
-        if self.animationDataValue.count == 0 {
-            self.isAnimationCompleted = false
-        }
-        self.animationDataValue.forEach { value in
-            if value != 0 {
-                self.isAnimationCompleted = false
+//        if self.previousData.count == 0 {
+//            self.isAnimationCompleted = true
+//        }
+        
+        let dataSet = self.delegate?.datasetForChart() ?? []
+        
+        if dataSet.count == self.previousData.count {
+            for index in 0..<dataSet.count {
+                let calculatedValue = round((dataSet[index].value / totalCalculatedValue) * 100)
+                if calculatedValue != self.previousData[index] {
+                    self.isAnimationCompleted = false
+                }
             }
         }
+        
+//        self.previousData.forEach { value1 in
+//            dataSet.forEach { value2 in
+//                let calculatedValue = round((value2.value / totalCalculatedValue) * 100)
+//                if calculatedValue != value1 {
+//                    self.isAnimationCompleted = false
+//                }
+//            }
+//        }
+        
+//        if self.previousData.elementsEqual(dataSet, by: { $0 != round(($1.value / totalCalculatedValue) * 100) }) {
+//            self.isAnimationCompleted = false
+//        }
+        
+        
+//        self.previousData.forEach { value in
+//            if value != 0 {
+//                self.isAnimationCompleted = false
+//            }
+//        }
         if self.isAnimationCompleted {
             timer?.invalidate()
+            isInitialStage = true
         }
         else{
 //            self.setNeedsDisplay()
@@ -258,6 +382,7 @@ public class WSPieChartView: UIView {
             if path.contains(location) {
                 activeIndex = arcPaths.firstIndex(of: path) ?? -1
                 self.delegate?.didSelectChartIndex(index: activeIndex)
+                isInitialStage = true
                 self.setNeedsDisplay()
             }
         }

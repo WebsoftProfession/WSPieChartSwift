@@ -11,7 +11,6 @@ import WSPieChartSwift
 
 class ViewController: UIViewController {
 
-    
     @IBOutlet weak var chartControl: WSPieChartView!
     var chartDataArray = [WSChartData]()
     
@@ -21,13 +20,11 @@ class ViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view, typically from a nib.
-        
         chartControl.delegate = self
         chartControl.titleFont = .systemFont(ofSize: 18)
         chartControl.titleColor = .white
         chartDataArray.append(WSChartData(value: 20, color: .systemGreen, title: "20%"))
         chartDataArray.append(WSChartData(value: 80, color: .systemRed, title: "80%"))
-        
     }
     
     @IBAction func reloadClicked(_ sender: Any) {
